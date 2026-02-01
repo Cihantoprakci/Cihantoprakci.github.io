@@ -4,6 +4,10 @@ body.ac {
     margin: 0;
     background-color: rgba(15, 23, 42, 1);
     background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),url('./image/71ec726_1684494261556-adobestock-348397404\ 1.svg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed;
 }
 .acc {
     background-color: rgba(30, 41, 59, 1);
