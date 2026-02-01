@@ -1324,11 +1324,18 @@ body.pr {
     main .my {
         flex-direction: column;
         height: auto;
-        padding-top: 50px;
+        padding-top: 30px;
     }
     
-    main .my .moi, main .my .picture {
+    main .my .moi {
         padding-left: 0;
+        margin: 0;
+        text-align: center;
+    }
+    
+    main .my .picture {
+        padding-left: 0;
+        padding-top: 30px;
         margin: 0;
     }
 
@@ -1337,17 +1344,135 @@ body.pr {
         margin-left: 0;
     }
 
+    main .my .moi .bachelor {
+        padding-right: 0;
+        justify-content: center;
+    }
+
     main .my .moi .bachelor h2 {
-        font-size: 24px;
+        font-size: 22px;
         width: auto;
         margin-left: 0;
+        text-align: center;
     }
-    main .projets-1 {
+
+    main > h2 {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 22px;
+    }
+    main .perso {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    main .perso .picture {
+        margin: 0 0 30px 0;
+    }
+
+    main .perso p {
+        width: 85%;
+    }
+
+    main .projets {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 30px;
+    }
+
+    main .projets img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    main .projets p {
+        width: 100%;
+        margin-right: 0;
+    }
+    main .competence {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 40px;
+    }
+
+    main .skills {
+        margin-right: 0;
+    }
+
+    main .competence .ranger {
+        gap: 50px;
+    }
+
+    .separator {
+        height: 2px;
+        width: 80%;
+        margin: 20px auto;
+    }
+    .projets-1, .projets-2 {
         flex-wrap: wrap;
         gap: 30px;
     }
+
+    .melinda, .mdw, .landing-page, .stunning, .jeux, .funiro {
+        width: 45%;
+        min-width: 300px;
+    }
+    .title-projet p {
+        width: 85%;
+    }
+
+    .design {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .projet-image {
+        width: 85%;
+        max-width: 500px;
+    }
+
+    .ux p, .tech p, .language-text p {
+        width: 85%;
+    }
+
+    .language {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .challenge p, .encours p {
+        width: 85%;
+    }
+
+    .etat .challenge, .etat .encours {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .contact-form {
+        width: 85%;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .acces-code p {
+        width: 85%;
+    }
 }
+
 @media screen and (max-width: 768px) {
+ 
     .acc {
         width: 100%;
         height: auto;
@@ -1363,69 +1488,448 @@ body.pr {
     .acc .menu {
         margin: 20px 0;
     }
-    main h1 { font-size: 32px !important; text-align: center; }
-    main h2 { 
-        font-size: 20px !important; 
-        width: 90% !important; 
-        margin-left: auto !important; 
-        margin-right: auto !important;
+
+    .logo {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    main .my {
+        padding-top: 20px;
+        margin-left: 0;
+    }
+
+    main .my .moi h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    main .my .moi .bachelor h2 {
+        font-size: 18px;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    main .my .picture .photo {
+        width: 150px;
+    }
+
+    main > h2 {
+        font-size: 18px;
+        width: 90%;
+        margin: 20px auto;
+    }
+    .entete {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    .entete .log {
+        margin: 10px 15px;
+    }
+
+    .entete .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .entete .menu a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .entete .CV {
+        margin: 10px auto;
+    }
+    main h1 {
+        font-size: 32px !important;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    main h2 {
+        font-size: 18px !important;
         text-align: center;
     }
-    main p { 
-        width: 90% !important; 
-        font-size: 16px !important; 
-        margin: 10px auto !important;
-    }
     main .perso {
-        flex-direction: column;
-        margin-top: 40px;
+        margin-top: 30px;
+        padding: 0 15px;
     }
 
     main .perso .picture {
-        margin: 0 0 30px 0;
+        margin: 0 0 20px 0;
+    }
+
+    main .perso .picture img {
+        width: 80%;
+        max-width: 300px;
     }
 
     main .perso .pres {
         text-align: center;
-        padding: 0 20px;
-    }
-    .competence {
-        flex-direction: column;
-        margin-left: 0;
-        align-items: center;
-        padding: 40px 20px;
+        padding: 0;
     }
 
-    .ranger {
+    main .perso p {
+        width: 100%;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    main .projets {
+        margin: 30px 15px;
+        gap: 20px;
+    }
+
+    main .projets p {
+        width: 100%;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    main .actuellement {
+        height: auto;
+        padding: 20px 15px;
+        margin-top: 50px;
+    }
+
+    main .actuellement h2 {
+        font-size: 16px;
+    }
+
+    main .actuellement h2 .gros {
+        font-size: 22px;
+    }
+    main .title-competence {
+        margin-top: 40px;
+        padding: 0 15px;
+    }
+
+    main .title-competence h2 {
+        font-size: 26px;
+    }
+
+    main .title-competence p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    main .competence {
+        margin: 40px 0;
+        padding: 0 15px;
+    }
+
+    main .competence .ranger {
         flex-direction: column;
-        gap: 0;
+        gap: 30px;
+    }
+
+    .category {
+        width: 100%;
     }
 
     .separator {
-        width: 80%;
+        width: 100%;
         height: 1px;
-        margin: 20px auto;
+        margin: 20px 0;
     }
 
-    .skills {
-        margin-right: 0;
+    .CurriculumVitae {
         width: 100%;
-        text-align: center;
+        margin-top: 30px;
     }
+
+    .CurriculumVitae img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .CurriculumVitae a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .title-contact {
+        padding-top: 50px;
+        padding: 50px 15px 0 15px;
+    }
+
+    .title-contact h1 {
+        font-size: 32px;
+    }
+
+    .title-contact p {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .contact {
+        padding: 50px 15px;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 25px 20px;
+        max-width: 100%;
+    }
+
+    .name {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input-group label {
+        font-size: 14px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .contact-info {
+        order: 2;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .envoie {
+        order: 1;
+        width: 100%;
+        padding: 12px;
+    }
+    .title-projets {
+        margin-top: 40px;
+        padding: 0 15px;
+    }
+
+    .title-projets h1 {
+        font-size: 32px;
+    }
+
+    .title-projets p {
+        width: 100%;
+        font-size: 16px;
+    }
+
     .projets-1, .projets-2 {
         flex-direction: column;
-        align-items: center;
+        margin-top: 40px;
+        gap: 30px;
+        padding: 0 15px;
     }
 
-    .melinda, .mdw, .landing-page, .euphoria, .stunning {
-        width: 90% !important;
+    .melinda, .mdw, .landing-page, .stunning, .jeux, .funiro {
+        width: 100%;
+        padding: 15px;
     }
-    .CurriculumVitae img {
-        width: 90%;
-        height: auto;
+
+    .melinda h2, .mdw h2, .landing-page h2, .stunning h2, .jeux h2, .funiro h2 {
+        font-size: 18px;
     }
-    .contact-container {
-        width: 95% !important;
-        padding: 20px !important;
+
+    .melinda p, .mdw p, .landing-page p, .stunning p, .jeux p, .funiro p {
+        font-size: 14px;
+    }
+
+    .icone img {
+        width: 30px;
+    }
+
+    .acces-code {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    .acces-code p {
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .acces-code a img {
+        width: 40px;
+    }
+    .title-projet {
+        margin-top: 40px;
+        padding: 0 15px;
+    }
+
+    .title-projet h1 {
+        font-size: 28px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .title-projet h1 span {
+        font-size: 22px;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .title-projet p {
+        width: 100%;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .design {
+        flex-direction: column;
+        margin-top: 40px;
+        padding: 0 15px;
+        gap: 30px;
+    }
+
+    .design > div {
+        width: 100%;
+    }
+
+    .projet-image {
+        width: 100%;
+    }
+
+    .code-icone, .cms-icone {
+        margin-top: 20px;
+        gap: 30px;
+    }
+
+    .code-icone img, .cms-icone img {
+        width: 40px;
+    }
+
+    .ux, .tech {
+        width: 100%;
+    }
+
+    .ux h2, .tech h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .ux p, .tech p {
+        width: 100%;
+        font-size: 15px;
+        text-align: justify;
+        margin-left: 0;
+    }
+
+    .language {
+        flex-direction: column;
+        margin-top: 40px;
+        padding: 0 15px;
+        gap: 30px;
+    }
+
+    .language-text {
+        width: 100%;
+    }
+
+    .language-text h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .language-text p {
+        width: 100%;
+        font-size: 15px;
+        text-align: justify;
+        margin-left: 0;
+    }
+
+    .icone-code {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .html, .css, .js {
+        align-self: center;
+    }
+
+    .icone-code img {
+        width: 50px;
+    }
+
+    .etat {
+        margin-top: 40px;
+        padding: 0 15px;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .etat .challenge, .etat .encours {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .challenge img, .encours img {
+        width: 60px;
+    }
+
+    .challenge p, .encours p {
+        width: 100%;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .challenge p span, .encours p span {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 480px) {
+    main .my .moi h1 {
+        font-size: 28px;
+    }
+
+    main .my .moi .bachelor h2 {
+        font-size: 16px;
+    }
+
+    main .my .picture .photo {
+        width: 120px;
+    }
+
+    .entete .menu a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    main h1 {
+        font-size: 26px !important;
+    }
+
+    .title-projet h1 {
+        font-size: 24px;
+    }
+
+    .title-projet h1 span {
+        font-size: 18px;
+    }
+
+    .contact-form {
+        padding: 20px 15px;
+    }
+
+    .envoie {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .melinda h2, .mdw h2, .landing-page h2, .stunning h2, .jeux h2, .funiro h2 {
+        font-size: 16px;
     }
 }
