@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="co">
+    <header class="entete">  
+        <div class="menu">
+            <img class="log" src="./image/logo-png 2.svg" alt="">
+            <a href="./index.html" class="Home">
+                <img src="./image/mdi_home-outline.svg" alt=""></a>
+            <a href="./apropos.html">Qui suis-je ?</a>
+            <a href="./mesprojets.html">Mes projets</a>
+        </div>  
+        <a href="./image/CV_2026-01-19_Cihan_Toprakci.pdf" class="CV" target="_blank">
+            <img src="./image/Frame 8.svg" alt="">
+        </a>
+    </header>
+    <main>
+        <section class="title-contact">
+            <h1>
+                Contactez-moi
+            </h1>
+            <img src="./image/Line 3.svg" alt="">
+            <p>
+                N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.
+            </p>
+        </section>
+        <section class="contact">
+            <form id="my-form" action="https://formspree.io/f/xkozwwol" method="POST" class="contact-form">
+                <div class="name">
+                    <div class="input-group">
+                        <label for="nom">Nom *</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom">
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">E-Mail *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="tel">Téléphone</label>
+                    <input type="tel" id="tel" name="tel">
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <div class="form-footer">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <img src="./image/material-symbols_mail-outline.svg" alt="">
+                            <span>ctoprakci74@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <img src="./image/mynaui_telephone.svg" alt="">
+                            <span>06 65 95 07 77</span>
+                        </div>
+                    </div>
+                    <button type="submit" id="submit-btn" class="envoie">ENVOYER</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script>
+        const form = document.querySelector(".contact-form");
+        
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            const btn = document.querySelector(".envoie");
+            const originalBtnText = btn.innerText;
+            btn.innerText = "ENVOI EN COURS...";
+            btn.style.opacity = "0.7";
+            btn.disabled = true;
+            fetch(event.target.action, {
+                method: "POST",
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.innerHTML = `
+                        <div style="
+                            display: flex; 
+                            flex-direction: column; 
+                            align-items: center; 
+                            justify-content: center; 
+                            height: 300px; 
+                            text-align: center;
+                            animation: fadeIn 0.5s ease;">
+                            
+                            <h2 style="color: #4ade80; margin: 0;"> Merci !</h2>
+                            <p style="color: white; margin-top: 10px;">Ton message a bien été envoyé.</p>
+                            <button onclick="window.location.reload()" style="margin-top: 20px; background: transparent; border: 1px solid white; color: white; padding: 10px; cursor: pointer;">Retour</button>
+                        </div>
+                    `;
+                } else {
+                    alert("Oups ! Il y a eu un problème.");
+                    btn.innerText = originalBtnText;
+                    btn.disabled = false;
+                }
+            }).catch(error => {
+                alert("Erreur de connexion.");
+                btn.innerText = originalBtnText;
+                btn.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
