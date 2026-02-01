@@ -1320,15 +1320,7 @@ body.pr {
 .acces-code a img {
     width: 50px;
 }
-
-
-/* ============================================================
-   RESPONSIVE DESIGN 
-   ============================================================ */
-
-/* --- TABLETTES ET PETITS ÉCRANS (1024px et moins) --- */
 @media screen and (max-width: 1024px) {
-    /* Ajustement de la section Accueil */
     main .my {
         flex-direction: column;
         height: auto;
@@ -1350,18 +1342,12 @@ body.pr {
         width: auto;
         margin-left: 0;
     }
-
-    /* Page Mes Projets : on passe de 3 à 2 colonnes ou 1 */
     main .projets-1 {
         flex-wrap: wrap;
         gap: 30px;
     }
 }
-
-/* --- MOBILES (768px et moins) --- */
 @media screen and (max-width: 768px) {
-    
-    /* 1. Transformation du menu latéral en menu haut pour l'accueil */
     .acc {
         width: 100%;
         height: auto;
@@ -1377,8 +1363,6 @@ body.pr {
     .acc .menu {
         margin: 20px 0;
     }
-
-    /* 2. Ajustements globaux des textes */
     main h1 { font-size: 32px !important; text-align: center; }
     main h2 { 
         font-size: 20px !important; 
@@ -1392,8 +1376,6 @@ body.pr {
         font-size: 16px !important; 
         margin: 10px auto !important;
     }
-
-    /* 3. Section À Propos */
     main .perso {
         flex-direction: column;
         margin-top: 40px;
@@ -1407,8 +1389,6 @@ body.pr {
         text-align: center;
         padding: 0 20px;
     }
-
-    /* 4. Compétences : On empile les catégories */
     .competence {
         flex-direction: column;
         margin-left: 0;
@@ -1432,8 +1412,6 @@ body.pr {
         width: 100%;
         text-align: center;
     }
-
-    /* 5. Cartes de projets (mesprojets.html) */
     .projets-1, .projets-2 {
         flex-direction: column;
         align-items: center;
@@ -1442,14 +1420,10 @@ body.pr {
     .melinda, .mdw, .landing-page, .euphoria, .stunning {
         width: 90% !important;
     }
-
-    /* 6. CV */
     .CurriculumVitae img {
         width: 90%;
         height: auto;
     }
-
-    /* 7. Formulaire de contact */
     .contact-container {
         width: 95% !important;
         padding: 20px !important;
