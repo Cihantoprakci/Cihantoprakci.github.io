@@ -1237,6 +1237,15 @@ body.co {
     margin-bottom: 30px;
 }
 .title-contact p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
