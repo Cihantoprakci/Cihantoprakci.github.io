@@ -1,3 +1,13 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .acc, .entete {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
 body.ac {
     width: 100%;
     padding: 0;
@@ -8,17 +18,27 @@ body.ac {
     background-size: cover; 
     background-position: center; 
     background-attachment: fixed;
+    -webkit-background-size: cover;
 }
 .acc {
     background-color: rgba(30, 41, 59, 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 250px;
-    height: 100%;
+    height: 100vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    position:fixed;
+    position: fixed;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    opacity: 100%;
+    opacity: 1;
 }
 .acc h2 {
     font-family: "Open Sans", sans-serif;
@@ -46,13 +66,15 @@ body.ac {
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight:600;
+    font-weight: 600;
     font-style: normal;
-    font-variation-settings:"wdth" 100;
+    font-variation-settings: "wdth" 100;
     font-size: 20px;
     color: rgba(248, 250, 252, 1);
     padding: 4px;
     margin: 0;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
 .acc .menu nav ul li a:hover {
@@ -62,8 +84,15 @@ body.ac {
     margin-top: 10px;
 }
 .acc .reseau {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .acc .reseau .img {
@@ -71,10 +100,17 @@ body.ac {
 }
 .reseau .img a {
     display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s ease, -webkit-filter 0.3s ease;
+    transition: -webkit-transform 0.3s ease, -webkit-filter 0.3s ease;
+    -o-transition: transform 0.3s ease, filter 0.3s ease;
     transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease, -webkit-transform 0.3s ease, -webkit-filter 0.3s ease;
 }
 .reseau .img a:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     transform: scale(1.2);
+    -webkit-filter: brightness(1.2);
     filter: brightness(1.2);
 }
 .acc .reseau .form {
@@ -91,30 +127,56 @@ body.ac {
     border-radius: 13px;
     margin-bottom: 15px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: color 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    -o-transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 .acc .reseau .form:hover {
-    background-color:  rgba(15, 23, 42, 1); 
+    background-color: rgba(15, 23, 42, 1); 
     color: white;                
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);     
+    -webkit-box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
-    align-items: end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     margin-right: 15px;
 }
 main .my {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 250px;
 }
 
 main .my .moi {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding-left: 90px;
 }
@@ -129,7 +191,11 @@ main .my .moi h1 {
     padding: 0;
 }
 main .my .moi .bachelor {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding-right: 75px;
     gap: 8px;
@@ -147,9 +213,18 @@ main .my .moi .bachelor h2 {
 }
 
 main .my .picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding-left: 100px;
     padding-top: 130px;
@@ -185,29 +260,41 @@ body.ap {
 .entete {
     height: 80px;
     background-color: rgba(30, 41, 59, 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 .entete .log {
     margin: 35px 30px 0 20px;
 }
 .entete .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .entete .menu a {
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight:600;
+    font-weight: 600;
     font-style: normal;
-    font-variation-settings:"wdth" 100;
+    font-variation-settings: "wdth" 100;
     font-size: 20px;
     color: rgba(248, 250, 252, 1);
     padding: 4px;
     margin: 0;
-    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;    
 }
 .entete .menu a:hover {
     color: rgba(244, 180, 0, 1);
@@ -215,7 +302,10 @@ body.ap {
 .entet .menu .Home:hover {
     background-color: rgba(30, 41, 59, 1); 
     color: white;       
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
+    -webkit-box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 .entete .CV {
@@ -224,11 +314,19 @@ body.ap {
     border: 2px solid;
     border-color: rgba(248, 250, 252, 1);
     border-radius: 8px;
+    -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 .entete .CV:hover {
     background-color: rgba(30, 41, 59, 1); 
     color: white;       
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
+    -webkit-box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 main h1 {
@@ -236,25 +334,42 @@ main h1 {
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+    font-variation-settings: "wdth" 100;
     font-size: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     color: rgba(248, 250, 252, 1);
 }
 
 main .perso {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 100px;
     height: 100%;
 }
 main .perso .picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -288,7 +403,11 @@ main .perso p {
     text-align: start;
 }
 main .projets {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 80px;
     margin-left: 100px;
@@ -309,10 +428,17 @@ main .projets p {
 main .actuellement {
     background-image: url(./image/Frame\ 12.svg);
     background-size: cover;
+    -webkit-background-size: cover;
     height: 130px;
     margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 main .actuellement h2 .gros {
@@ -341,9 +467,18 @@ main .actuellement h2 {
 }
 main .title-competence {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 70px;
 }
@@ -372,97 +507,118 @@ main .title-competence p {
     font-size: 20px;
 }
 .competence {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 100px 0 80px 0;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 20px;
     margin-right: 150px;
 }
 
 .ranger {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     gap: 30px;
 }
 
 .category {
-    position: relative;
-}
-
-.separator {
-    width: 1px;
-    height: 300px;
-    background-color: rgba(248, 250, 252, 1);
-    margin: 50px;
+    min-width: 250px;
 }
 
 .category h3 {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Inter", sans-serif;
     font-weight: bold;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
     font-size: 20px;
-    margin-bottom: 40px;
     color: rgba(248, 250, 252, 1);
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(244, 180, 0, 1);
+    padding-bottom: 10px;
 }
 
 .skill-item {
-    margin-bottom: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .skill-name {
-    color: rgba(244, 180, 0, 1);
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
-    font-size: 18px;
-    display: block;
-    margin-bottom: 10px;
+    font-size: 16px;
+    color: rgba(248, 250, 252, 1);
 }
 
-.skill-item img {
-    height: 100%;
+.separator {
+    width: 2px;
+    height: 150px;
+    background-color: rgba(71, 85, 105, 1);
+    margin: 0 20px;
 }
 
 .CurriculumVitae {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 20px;
 }
+
 .CurriculumVitae img {
-    width: 400px;
-    height: 550px;
+    max-width: 400px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .CurriculumVitae a {
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
     font-weight: bold;
-    font-style: normal;
-    font-size: 20px;
-    background: rgba(248, 250, 252, 1);
-    color: #0a1120;
-    padding: 13px 25px;
+    font-size: 18px;
+    color: rgba(248, 250, 252, 1);
+    padding: 12px 30px;
+    border: 2px solid rgba(248, 250, 252, 1);
+    background-color: transparent;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 10px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
+
 .CurriculumVitae a:hover {
-    background-color: transparent; 
-    color: white;                
+    background-color: rgba(244, 180, 0, 1);
+    border-color: rgba(244, 180, 0, 1);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 body.mp {
@@ -472,30 +628,30 @@ body.mp {
     background-color: rgba(15, 23, 42, 1);
 }
 
-main .title-projets {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.title-projets {
+    margin-top: 100px;
+    text-align: center;
 }
 
-main p {
+.title-projets h1 {
+    margin-bottom: 30px;
+}
+
+.title-projets p {
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
     font-size: 20px;
     color: rgba(248, 250, 252, 1);
-    width: 600px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 main .projets-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     margin: 100px 0 0 0;
     padding: 0;
     width: 100%;
@@ -515,6 +671,14 @@ main .projets-1 {
     border-radius: 20px;
     border-color: rgba(53, 118, 41, 1);
     padding: 13px;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    max-width: 350px;
 }
 .melinda img {
     width: 300px;
@@ -547,6 +711,8 @@ main .projets-1 {
     width: 280px;
 }
 .melinda .icone {
+    display: -webkit-box;
+    display: -ms-flexbox;
     width: 70px;
     height: 20px;
     display: flex;
@@ -568,12 +734,20 @@ main .projets-1 {
     background-color: rgba(53, 118, 41, 1);
     padding: 10px 40px;
     border-radius: 10px;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 .melinda a:hover {
     background-color:  rgba(53, 118, 41, 1); 
     color: white;                
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-box-shadow: 0 10px 30px rgba(53, 118, 41, 1);
+    box-shadow: 0 10px 30px rgba(53, 118, 41, 1);
 }
 .projets-1 .mdw {
     display: flex;
@@ -586,6 +760,14 @@ main .projets-1 {
     border-radius: 20px;
     border-color: rgba(112, 58, 202, 1);
     padding: 13px;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    max-width: 350px;
 }
 .mdw img {
     width: 300px;
@@ -618,6 +800,8 @@ main .projets-1 {
     width: 280px;
 }
 .mdw .icone {
+    display: -webkit-box;
+    display: -ms-flexbox;
     width: 70px;
     height: 20px;
     display: flex;
@@ -639,12 +823,20 @@ main .projets-1 {
     background-color: rgba(112, 58, 202, 1);
     padding: 10px 40px;
     border-radius: 10px;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 .mdw a:hover {
     background-color:  rgba(112, 58, 202, 1); 
     color: white;                
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-box-shadow: 0 10px 30px rgba(112, 58, 202, 1);
+    box-shadow: 0 10px 30px rgba(112, 58, 202, 1);
 }
 .projets-1 .landing-page {
     display: flex;
@@ -657,6 +849,14 @@ main .projets-1 {
     border-radius: 20px;
     border-color: rgba(205, 221, 214, 1);
     padding: 13px;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    max-width: 350px;
 }
 .landing-page img {
     width: 300px;
@@ -689,6 +889,8 @@ main .projets-1 {
     width: 280px;
 }
 .landing-page .icone {
+    display: -webkit-box;
+    display: -ms-flexbox;
     width: 70px;
     height: 20px;
     display: flex;
@@ -710,15 +912,27 @@ main .projets-1 {
     background-color: rgba(205, 221, 214, 1);
     padding: 10px 40px;
     border-radius: 10px;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 .landing-page a:hover {
     background-color:  rgba(205, 221, 214, 1); 
     color: white;                
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-box-shadow: 0 10px 30px  rgba(205, 221, 214, 1);
+    box-shadow: 0 10px 30px  rgba(205, 221, 214, 1);
 }
 main .projets-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     margin: 70px 0 0 0;
     padding: 0;
     width: 100%;
@@ -738,6 +952,14 @@ main .projets-2 {
     border-radius: 20px;
     border-color: rgba(17, 17, 139, 1);
     padding: 13px;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    max-width: 350px;
 }
 .stunning img {
     width: 300px;
@@ -770,6 +992,8 @@ main .projets-2 {
     width: 280px;
 }
 .stunning .icone {
+    display: -webkit-box;
+    display: -ms-flexbox;
     width: 70px;
     height: 20px;
     display: flex;
@@ -791,12 +1015,20 @@ main .projets-2 {
     background-color:rgba(17, 17, 139, 1);
     padding: 10px 40px;
     border-radius: 10px;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 .stunning a:hover {
     background-color: rgba(17, 17, 139, 1); 
     color: white;                
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-box-shadow: 0 10px 30px rgba(17, 17, 139, 1);
+    box-shadow: 0 10px 30px rgba(17, 17, 139, 1);
 }
 .projets-2 .jeux {
     display: flex;
@@ -809,6 +1041,14 @@ main .projets-2 {
     border-radius: 20px;
     border-color: rgba(34, 27, 78, 1);
     padding: 13px;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    max-width: 350px;
 }
 .jeux img {
     width: 300px;
@@ -841,6 +1081,8 @@ main .projets-2 {
     width: 280px;
 }
 .jeux .icone {
+    display: -webkit-box;
+    display: -ms-flexbox;
     width: 70px;
     height: 20px;
     display: flex;
@@ -862,12 +1104,20 @@ main .projets-2 {
     background-color: rgba(34, 27, 78, 1);
     padding: 10px 40px;
     border-radius: 10px;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 .jeux a:hover {
     background-color: rgba(34, 27, 78, 1); 
     color: white;                
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-box-shadow: 0 10px 30px rgba(34, 27, 78, 1);
+    box-shadow: 0 10px 30px rgba(34, 27, 78, 1);
 }
 .projets-2 .funiro {
     display: flex;
@@ -881,6 +1131,14 @@ main .projets-2 {
     border-radius: 20px;
     border-color: rgba(184, 142, 47, 1);
     padding: 13px;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    max-width: 350px;
 }
 .funiro img {
     width: 300px;
@@ -913,6 +1171,8 @@ main .projets-2 {
     width: 280px;
 }
 .funiro .icone {
+    display: -webkit-box;
+    display: -ms-flexbox;
     width: 70px;
     height: 20px;
     display: flex;
@@ -934,12 +1194,20 @@ main .projets-2 {
     background-color: rgba(184, 142, 47, 1);
     padding: 10px 40px;
     border-radius: 10px;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 .funiro a:hover {
     background-color: rgba(184, 142, 47, 1); 
     color: white;                
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-box-shadow: 0 10px 30px rgba(184, 142, 47, 1);
+    box-shadow: 0 10px 30px rgba(184, 142, 47, 1);
 }
 
 body.co {
@@ -982,11 +1250,16 @@ body.co {
 }
 
 .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    padding: 50px;
-    font-family: sans-serif;
-    margin-bottom: 40px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 100px 20px;
 }
 
 .contact-form {
@@ -997,43 +1270,93 @@ body.co {
     max-width: 470px;
     color: white;
     backdrop-filter: blur(0,1px);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .name {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 20px;
     margin-bottom: 10px;
 }
 
 .input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     margin-bottom: 10px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .input-group label {
-    margin-bottom: 5px;
-    font-size: 0.9rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(248, 250, 252, 1);
+    margin-bottom: 8px;
 }
 
-input, textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: white;
-    font-size: 1rem;
+.input-group input,
+.input-group textarea {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    padding: 12px;
+    border: 2px solid rgba(71, 85, 105, 1);
+    border-radius: 8px;
+    color: rgba(248, 250, 252, 1);
+    -webkit-transition: border-color 0.3s ease;
+    -o-transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease;
+}
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: rgba(244, 180, 0, 1);
 }
 
 .form-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
-.info-item {
+.contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    gap: 10px;
+}
+
+.info-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    gap: 3px;
+    gap: 10px;
+}
+
+.info-item span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: rgba(248, 250, 252, 1);
 }
 .form-footer span {
     font-family: "Open Sans", sans-serif;
@@ -1046,34 +1369,65 @@ input, textarea {
     color: rgba(248, 250, 252, 1);
 }
 
-.contact-info {
-    font-size: 0.8rem;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-}
 
 .envoie {
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
-    font-style: normal;
     font-size: 17px;
     color: rgba(248, 250, 252, 1);
-    background-color: rgba(15, 23, 42, 1);
-    border: 1px solid;
-    border-color: #0a1120;
-    border-radius: 3px;
-    padding: 10px 25px;
+    padding: 15px 25px;
+    border: 2px solid rgba(244, 180, 0, 1);
+    background-color: rgba(244, 180, 0, 1);
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
-    margin-top: 20px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .envoie:hover {
-    background-color: rgba(30, 41, 59, 1);
-    color: rgba(15, 23, 42, 1);
+    background-color: transparent;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.acces-code {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 30px;
+    margin: 100px auto 80px;
+    max-width: 900px;
+    padding: 0 40px;
+}
+
+.acces-code p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: rgba(248, 250, 252, 1);
+}
+
+.acces-code a {
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.acces-code a:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.acces-code img {
+    width: 50px;
 }
 
 body.pr {
@@ -1084,51 +1438,43 @@ body.pr {
 }
 
 .title-projet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+    margin-top: 80px;
+    text-align: center;
+    padding: 0 40px;
 }
+
 .title-projet h1 {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 50px;
-    color: rgba(248, 250, 252, 1);
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
+
 .title-projet h1 span {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
-    font-size: 30px;
-    color: rgba(248, 250, 252, 1);
+    display: block;
+    font-size: 35px;
+    color: rgba(244, 180, 0, 1);
+    margin-top: 15px;
 }
+
 .title-projet p {
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
-    font-size: 20px;
+    font-size: 18px;
     color: rgba(248, 250, 252, 1);
-    width: 900px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+    line-height: 1.6;
 }
 .design {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    margin-top: 130px;
-    gap: 40px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 80px;
+    padding: 0 80px;
 }
 .design h2 {
     margin: 0;
@@ -1155,14 +1501,28 @@ body.pr {
     text-align: start;
     margin-left: 15px;
 }
+.design > div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 600px;
+}
 .language {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 110px;
     justify-content: center;
     gap: 70px;
 }
 .language .language-text {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     display: flex;
     flex-direction: column;
 }
@@ -1193,22 +1553,35 @@ body.pr {
     width: 700px;
 }
 .icone-code {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     gap: 30px;
     width: 300px;
 }
 .html { 
+    -ms-flex-item-align: end;
     align-self: flex-end; 
 }
 .css { 
+    -ms-flex-item-align: end;
     align-self: center; 
 }
-.js { 
+.js {
+    -ms-flex-item-align: end;
     align-self: flex-start; 
 }
 .etat {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 100px;
@@ -1217,13 +1590,23 @@ body.pr {
     margin-bottom: 50px;
 }
 .etat .challenge {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     align-items: center;
     justify-content: center;
     gap: 150px;
 }
 .challenge p {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     flex-direction: column;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -1247,13 +1630,23 @@ body.pr {
     color: rgba(248, 250, 252, 1);
 }
 .etat .encours {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     align-items: center;
     justify-content: center;
     gap: 150px;
 }
 .encours p {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     flex-direction: column;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -1277,53 +1670,670 @@ body.pr {
     color: rgba(248, 250, 252, 1);
 }
 .projet-image {
-    width: 500px;
+    width: 100%;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
-.code-icone {
+.code-icone, .cms-icone {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    gap: 60px;
-    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
-.cms-icone {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
+
+.ux, .tech {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 600px;
 }
-.acces-code {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
+
+.ux h2, .tech h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgba(248, 250, 252, 1);
+    margin-bottom: 25px;
 }
-.acces-code p {
+
+.ux p, .tech p {
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
     font-size: 17px;
     color: rgba(248, 250, 252, 1);
-    width: 1100px;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 5px;
+    line-height: 1.8;
+    margin-left: 20px;
 }
-.acces-code a {
-    display: inline-block;
-    transition: transform 0.3s ease, filter 0.3s ease;
+
+.ux p span, .tech p span {
+    display: block;
+    margin-top: 15px;
 }
-.acces-code a:hover {
-    transform: scale(1.2);
-    filter: brightness(1.2);
+@media screen and (min-width: 1920px) {
+    .acc {
+        width: 300px;
+    }
+
+    .acc h2 {
+        font-size: 38px;
+    }
+
+    .acc .menu nav ul li a {
+        font-size: 24px;
+    }
+
+    .acc .reseau .form {
+        font-size: 24px;
+        padding: 14px 20px;
+    }
+
+    main .my {
+        height: 350px;
+    }
+
+    main .my .moi h1 {
+        font-size: 90px;
+    }
+
+    main .my .moi .bachelor h2 {
+        font-size: 38px;
+        width: 550px;
+    }
+
+    main .my .picture .photo {
+        width: 240px;
+    }
+
+    main h2 {
+        font-size: 32px;
+        width: 800px;
+        margin-left: 360px;
+    }
+
+    .entete {
+        height: 100px;
+    }
+
+    .entete .menu a {
+        font-size: 24px;
+    }
+
+    main h1 {
+        font-size: 65px;
+    }
+
+    main .perso {
+        margin-top: 120px;
+    }
+
+    main .perso .picture {
+        margin-right: 120px;
+        margin-left: 200px;
+    }
+
+    main .perso h2 {
+        font-size: 38px;
+    }
+
+    main .perso p {
+        font-size: 20px;
+        width: 750px;
+    }
+
+    main .projets {
+        margin-left: 150px;
+    }
+
+    main .projets p {
+        font-size: 20px;
+        width: 900px;
+        margin-right: 120px;
+    }
+
+    main .actuellement {
+        height: 160px;
+        margin-top: 120px;
+    }
+
+    main .actuellement h2 .gros {
+        font-size: 38px;
+    }
+
+    main .actuellement h2 {
+        font-size: 26px;
+    }
+
+    main .title-competence {
+        margin-top: 100px;
+    }
+
+    main .title-competence h2 {
+        font-size: 42px;
+        margin-bottom: 40px;
+    }
+
+    main .title-competence p {
+        width: 800px;
+        font-size: 24px;
+    }
+
+    .competence {
+        padding: 120px 0 100px 0;
+        margin-left: 150px;
+    }
+
+    .category {
+        min-width: 320px;
+    }
+
+    .category h3 {
+        font-size: 26px;
+    }
+
+    .skill-name {
+        font-size: 20px;
+    }
+
+    .CurriculumVitae img {
+        max-width: 500px;
+    }
+
+    .CurriculumVitae a {
+        font-size: 22px;
+        padding: 16px 40px;
+    }
+
+    .title-contact {
+        padding-top: 100px;
+    }
+
+    .title-contact p {
+        font-size: 24px;
+        max-width: 1000px;
+    }
+
+    .contact {
+        padding: 120px 20px;
+    }
+
+    .contact-form {
+        max-width: 1000px;
+        padding: 50px;
+    }
+
+    .input-group label {
+        font-size: 20px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    .info-item span {
+        font-size: 20px;
+    }
+
+    .envoie {
+        font-size: 22px;
+        padding: 18px 50px;
+    }
+
+    .title-projets {
+        margin-top: 120px;
+    }
+
+    .title-projets p {
+        font-size: 24px;
+        max-width: 1200px;
+    }
+
+    .projets-1, .projets-2 {
+        gap: 60px;
+        margin-top: 100px;
+        padding: 0 80px;
+    }
+
+    .melinda, .mdw, .landing-page, .stunning, .jeux, .funiro {
+        padding: 35px;
+        max-width: 450px;
+    }
+
+    .melinda h2, .mdw h2, .landing-page h2,
+    .stunning h2, .jeux h2, .funiro h2 {
+        font-size: 28px;
+    }
+
+    .melinda p, .mdw p, .landing-page p,
+    .stunning p, .jeux p, .funiro p {
+        font-size: 19px;
+    }
+
+    .icone img {
+        width: 45px;
+    }
+
+    .melinda a, .mdw a, .landing-page a,
+    .stunning a, .jeux a, .funiro a {
+        font-size: 20px;
+    }
+
+    .acces-code {
+        margin: 120px auto 100px;
+        max-width: 1200px;
+    }
+
+    .acces-code p {
+        font-size: 22px;
+    }
+
+    .acces-code a img {
+        width: 70px;
+    }
+
+    .title-projet {
+        margin-top: 100px;
+        padding: 0 80px;
+    }
+
+    .title-projet h1 span {
+        font-size: 45px;
+    }
+
+    .title-projet p {
+        font-size: 22px;
+        max-width: 1300px;
+    }
+
+    .design {
+        gap: 80px;
+        margin-top: 100px;
+        padding: 0 120px;
+    }
+
+    .design > div {
+        max-width: 750px;
+    }
+
+    .code-icone img, .cms-icone img {
+        width: 65px;
+    }
+
+    .ux, .tech {
+        max-width: 750px;
+    }
+
+    .ux h2, .tech h2 {
+        font-size: 35px;
+    }
+
+    .ux p, .tech p {
+        font-size: 20px;
+    }
+
+    .language {
+        gap: 80px;
+        margin-top: 100px;
+        padding: 0 120px;
+    }
+
+    .language-text {
+        max-width: 1000px;
+    }
+
+    .language-text h2 {
+        font-size: 35px;
+    }
+
+    .language-text p {
+        font-size: 20px;
+    }
+
+    .icone-code img {
+        width: 90px;
+    }
+
+    .etat {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding: 0 120px;
+    }
+
+    .etat .challenge, .etat .encours {
+        padding: 40px;
+    }
+
+    .challenge img, .encours img {
+        width: 100px;
+    }
+
+    .challenge p, .encours p {
+        font-size: 20px;
+    }
+
+    .challenge p span, .encours p span {
+        font-size: 28px;
+    }
 }
-.acces-code a img {
-    width: 50px;
+
+@media screen and (min-width: 2560px) {
+    .acc {
+        width: 400px;
+    }
+
+    .acc h2 {
+        font-size: 48px;
+    }
+
+    .acc .menu nav ul li a {
+        font-size: 30px;
+    }
+
+    .acc .reseau .form {
+        font-size: 30px;
+        padding: 18px 25px;
+    }
+
+    main .my {
+        height: 450px;
+    }
+
+    main .my .moi h1 {
+        font-size: 120px;
+    }
+
+    main .my .moi .bachelor h2 {
+        font-size: 50px;
+        width: 700px;
+    }
+
+    main .my .picture .photo {
+        width: 320px;
+    }
+
+    main h2 {
+        font-size: 42px;
+        width: 1000px;
+        margin-left: 460px;
+    }
+
+    .entete {
+        height: 120px;
+    }
+
+    .entete .menu a {
+        font-size: 32px;
+    }
+
+    main h1 {
+        font-size: 85px;
+    }
+
+    main .perso {
+        margin-top: 150px;
+    }
+
+    main .perso .picture {
+        margin-right: 150px;
+        margin-left: 250px;
+    }
+
+    main .perso h2 {
+        font-size: 48px;
+    }
+
+    main .perso p {
+        font-size: 26px;
+        width: 950px;
+    }
+
+    main .projets {
+        margin-left: 200px;
+    }
+
+    main .projets p {
+        font-size: 26px;
+        width: 1200px;
+        margin-right: 150px;
+    }
+
+    main .actuellement {
+        height: 200px;
+        margin-top: 150px;
+    }
+
+    main .actuellement h2 .gros {
+        font-size: 48px;
+    }
+
+    main .actuellement h2 {
+        font-size: 34px;
+    }
+
+    main .title-competence {
+        margin-top: 130px;
+    }
+
+    main .title-competence h2 {
+        font-size: 54px;
+        margin-bottom: 50px;
+    }
+
+    main .title-competence p {
+        width: 1000px;
+        font-size: 30px;
+    }
+
+    .competence {
+        padding: 150px 0 120px 0;
+        margin-left: 200px;
+    }
+
+    .category {
+        min-width: 420px;
+    }
+
+    .category h3 {
+        font-size: 34px;
+    }
+
+    .skill-name {
+        font-size: 26px;
+    }
+
+    .separator {
+        height: 200px;
+    }
+
+    .CurriculumVitae img {
+        max-width: 650px;
+    }
+
+    .CurriculumVitae a {
+        font-size: 28px;
+        padding: 20px 50px;
+    }
+
+    .title-contact {
+        padding-top: 130px;
+    }
+
+    .title-contact p {
+        font-size: 30px;
+        max-width: 1300px;
+    }
+
+    .contact {
+        padding: 150px 20px;
+    }
+
+    .contact-form {
+        max-width: 1300px;
+        padding: 60px;
+    }
+
+    .input-group label {
+        font-size: 26px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .info-item span {
+        font-size: 26px;
+    }
+
+    .envoie {
+        font-size: 28px;
+        padding: 22px 60px;
+    }
+
+    .title-projets {
+        margin-top: 150px;
+    }
+
+    .title-projets p {
+        font-size: 30px;
+        max-width: 1500px;
+    }
+
+    .projets-1, .projets-2 {
+        gap: 80px;
+        margin-top: 130px;
+        padding: 0 120px;
+    }
+
+    .melinda, .mdw, .landing-page, .stunning, .jeux, .funiro {
+        padding: 45px;
+        max-width: 550px;
+    }
+
+    .melinda h2, .mdw h2, .landing-page h2,
+    .stunning h2, .jeux h2, .funiro h2 {
+        font-size: 36px;
+    }
+
+    .melinda p, .mdw p, .landing-page p,
+    .stunning p, .jeux p, .funiro p {
+        font-size: 24px;
+    }
+
+    .icone img {
+        width: 55px;
+    }
+
+    .melinda a, .mdw a, .landing-page a,
+    .stunning a, .jeux a, .funiro a {
+        font-size: 26px;
+    }
+
+    .acces-code {
+        margin: 150px auto 130px;
+        max-width: 1500px;
+    }
+
+    .acces-code p {
+        font-size: 28px;
+    }
+
+    .acces-code a img {
+        width: 90px;
+    }
+
+    .title-projet {
+        margin-top: 130px;
+        padding: 0 120px;
+    }
+
+    .title-projet h1 span {
+        font-size: 58px;
+    }
+
+    .title-projet p {
+        font-size: 28px;
+        max-width: 1600px;
+    }
+
+    .design {
+        gap: 100px;
+        margin-top: 130px;
+        padding: 0 150px;
+    }
+
+    .design > div {
+        max-width: 950px;
+    }
+
+    .code-icone img, .cms-icone img {
+        width: 85px;
+    }
+
+    .ux, .tech {
+        max-width: 950px;
+    }
+
+    .ux h2, .tech h2 {
+        font-size: 45px;
+    }
+
+    .ux p, .tech p {
+        font-size: 26px;
+    }
+
+    .language {
+        gap: 100px;
+        margin-top: 130px;
+        padding: 0 150px;
+    }
+
+    .language-text {
+        max-width: 1300px;
+    }
+
+    .language-text h2 {
+        font-size: 45px;
+    }
+
+    .language-text p {
+        font-size: 26px;
+    }
+
+    .icone-code img {
+        width: 110px;
+    }
+
+    .etat {
+        margin-top: 130px;
+        margin-bottom: 130px;
+        padding: 0 150px;
+    }
+
+    .etat .challenge, .etat .encours {
+        padding: 50px;
+    }
+
+    .challenge img, .encours img {
+        width: 130px;
+    }
+
+    .challenge p, .encours p {
+        font-size: 26px;
+    }
+
+    .challenge p span, .encours p span {
+        font-size: 36px;
+    }
 }
+
 @media screen and (max-width: 1024px) {
     main .my {
         flex-direction: column;
