@@ -11,12 +11,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Cihan Toprakci | Portfolio Développeur Web
-</title>
+    </title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./image/logo-png 2.svg">
 </head>
 
 <body class="ac">
+    <div id="code-background">
+        <div id="particles"></div>
+    </div>
     <header class="acc">
         <h2>ACCUEIL</h2>
         <div class="menu">
@@ -73,5 +76,20 @@
         </section>
         <h2>Bienvenue dans mon environnement de développement.</h2>
     </main>
+    <script>
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 70; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.setProperty('--tx', (Math.random() - 0.5) * 200 + 'px');
+                particle.style.animationDuration = (Math.random() * 7 + 8) + 's';
+                particle.style.animationDelay = Math.random() * 8 + 's';             
+                particlesContainer.appendChild(particle);
+            }
+        }
+        createParticles();
+    </script>
 </body>
 </html>
