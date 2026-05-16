@@ -1,0 +1,99 @@
+:root {
+  --color-bg: #0b1120;
+  --color-bg-elevated: #111a2e;
+  --color-bg-overlay: rgba(11, 17, 32, 0.85);
+  --color-surface: #1a2440;
+  --color-border: rgba(248, 250, 252, 0.08);
+  --color-border-strong: rgba(248, 250, 252, 0.16);
+
+  --color-text: #f8fafc;
+  --color-text-muted: rgba(248, 250, 252, 0.7);
+  --color-text-dim: rgba(248, 250, 252, 0.5);
+
+  --color-accent: #f4b400;
+  --color-accent-hover: #ffc933;
+  --color-accent-dim: rgba(244, 180, 0, 0.15);
+  --color-accent-glow: rgba(244, 180, 0, 0.35);
+
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+
+  --font-display: 'Space Grotesk', 'Clash Display', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+  --fs-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  --fs-sm: clamp(0.875rem, 0.825rem + 0.25vw, 0.9375rem);
+  --fs-base: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+  --fs-md: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
+  --fs-lg: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --fs-xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --fs-2xl: clamp(2rem, 1.6rem + 2vw, 3rem);
+  --fs-3xl: clamp(2.5rem, 1.8rem + 3.5vw, 4.5rem);
+  --fs-4xl: clamp(3rem, 2rem + 5vw, 6.5rem);
+  --fs-display: clamp(3.5rem, 2.4rem + 5.5vw, 7.5rem);
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.12em;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  --space-6xl: 12rem;
+
+  --section-py: clamp(4rem, 8vw, 8rem);
+  --section-px: clamp(1.25rem, 4vw, 3rem);
+
+  --container-max: 1280px;
+  --container-narrow: 880px;
+
+  --nav-h: clamp(60px, 5vw + 16px, 76px);
+
+  --bp-md: 600px;
+  --bp-lg: 900px;
+  --bp-xl: 1200px;
+  --bp-xxl: 1600px;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 40px var(--color-accent-glow);
+
+  --easing-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --easing-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 450ms;
+
+  --z-cursor: 9999;
+  --z-preloader: 9000;
+  --z-modal: 1000;
+  --z-nav: 100;
+  --z-scroll-progress: 90;
+  --z-base: 1;
+}

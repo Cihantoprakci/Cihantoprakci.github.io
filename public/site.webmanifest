@@ -1,0 +1,24 @@
+{
+  "name": "Cihan Toprakci, étudiant développeur web",
+  "short_name": "Cihan Toprakci",
+  "lang": "fr",
+  "description": "Portfolio de Cihan Toprakci, étudiant en Bachelor Développement Web. En recherche d'alternance pour septembre 2026.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0b1120",
+  "background_color": "#0b1120",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+.btn {
+  --btn-pad-y: 0.85rem;
+  --btn-pad-x: 1.5rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: var(--btn-pad-y) var(--btn-pad-x);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+  transition:
+    background-color var(--duration-base) var(--easing-out),
+    color var(--duration-base) var(--easing-out),
+    border-color var(--duration-base) var(--easing-out),
+    transform 0.1s var(--easing-out);
+  white-space: nowrap;
+  user-select: none;
+  text-decoration: none;
+}
+
+.btn small {
+  font-size: 0.72em;
+  font-weight: var(--fw-regular);
+  opacity: 0.7;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.btn svg {
+  flex-shrink: 0;
+  transition: transform var(--duration-base) var(--easing-out);
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-hover);
+  color: var(--color-bg);
+  box-shadow:
+    0 0 0 1px var(--color-accent-hover),
+    var(--shadow-glow);
+}
+
+.btn--primary:hover svg {
+  transform: translateX(4px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border-strong);
+}
+
+.btn--ghost:hover {
+  background: var(--color-accent-dim);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn--ghost:hover svg {
+  transform: translateY(2px);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn[data-magnetic] {
+  will-change: transform;
+}
+
+.btn[disabled],
+.btn[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

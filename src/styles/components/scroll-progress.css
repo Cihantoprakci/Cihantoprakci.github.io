@@ -1,0 +1,12 @@
+.scroll-progress {
+  display: none;
+}
+
+.scroll-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent-glow);
+  transform-origin: left;
+  will-change: width;
+}

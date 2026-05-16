@@ -1,0 +1,21 @@
+@layer reset, tokens, typography, utilities, components, sections, pages;
+
+@import './base/reset.css' layer(reset);
+@import './base/tokens.css' layer(tokens);
+@import './base/typography.css' layer(typography);
+@import './base/utilities.css' layer(utilities);
+
+@import './components/button.css' layer(components);
+@import './components/nav.css' layer(components);
+@import './components/scroll-progress.css' layer(components);
+@import './components/skill-pill.css' layer(components);
+@import './components/form.css' layer(components);
+
+@import './sections/hero.css' layer(sections);
+@import './sections/about.css' layer(sections);
+@import './sections/projects.css' layer(sections);
+@import './sections/skills.css' layer(sections);
+@import './sections/contact.css' layer(sections);
+@import './sections/footer.css' layer(sections);
+
+@import './pages/project-detail.css' layer(pages);
